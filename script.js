@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     gameCanvas.style.display = "none";
 
 
-  
-
     //starts the game and 
     playerForm.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form submission
@@ -37,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let revealCount = 0;
         const spyNumber = Math.floor(Math.random() * numPlayers);
       
+        console.log(spyNumber, randomNumber, revealCount)
+
         const messageDisplay = document.getElementById("messageDisplay");
         const revealButton = document.getElementById("revealButton");
         const hideButton = document.getElementById("hideButton");
@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function() {
             revealButton.style.display = "none"
             messageDisplay.style.display = "block"
             messageDisplay.innerText = "Go ahead, find out the spy is! /n Start new game"
+  
+
           }
 
         });
